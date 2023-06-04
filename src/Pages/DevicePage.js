@@ -7,9 +7,6 @@ const DevicePage = () => {
     <>
        <Navbar/>
        <BreadCrumb/>
-
-    
-    
     </>
   )
 }
