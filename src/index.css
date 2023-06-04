@@ -1,13 +1,183 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+/* device card  */
+
+.device_card_section .card .card-body .status {
+  left: 10px !important;
+  width: 20px;
+  height: 20px;
+  background-color: #B2B8BC !important;  
+}
+.device_card_section .card .card-body .dropdown{
+  cursor: pointer;
+
+} 
+.device_card_section .card .card-body .status.on{
+  background: #23C16B !important;
+}
+.device_card_section .card .card-body .device-img{
+  width: 186px;
+}
+.device_card_section .card .card-body .device-img .img {
+  width: 100%;
+}
+.device_card_section .card .card-body .card-title{
+  font-size: 24px;
+}
+.device_card_section hr.devider {
+  border-color: #F2F4F5 !important;
+  opacity: 1;
+  margin: 13px 0px !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.half_circle_progressbar .progress {
+  position: relative;
+  margin: 6px;
+  float: left;
+  text-align: center;
+  background: no-repeat;
+  height: auto;
+  overflow: visible;
+  display: block;
+}
+.half_circle_progressbar .progress span{
+  font-size: 17px;
+}
+.half_circle_progressbar .progress .pro-title {
+  margin-top: 9px;
+}
+.barOverflow{ /* Wraps the rotating .bar */
+  position: relative;
+  overflow: hidden; /* Comment this line to understand the trick */
+  width: 70px; height: 35px; /* Half circle (overflow) */
+  margin-bottom: -24px; /* bring the numbers up */
+}
+.bar{
+  position: absolute;
+  top: 0; left: 0;
+  width: 70px; height: 70px; /* full circle! */
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 6px solid #eee;     /* half gray, */
+  border-bottom-color: #0bf;  /* half azure */
+  border-right-color: #0bf;
+}
+
+.device_card_section .card{
+  transition: all 0.6s ease;
+  width: 344px;
+  height: 507px;
+}
+
+.device_card_section .card:hover{
+  /* box-shadow: #3D90D7 -10px 10px, #C9F0FF -20px 20px !important; */
+  box-shadow: #CDCFD0 7px 7px 11px 0px !important;
+}
+
+.device_card_section .card .card-body .dropdown-menu.show{
+  transform: translate(-158px, 31px) !important;
+}
+
+
+/*device card end */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.side-navbar {
+  width: 296px;
+  height: 100%;
+  position: fixed;
+  margin-left: -300px;  
+  transition: 0.5s;
+}
+
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover {
+  background-color: #ffffff26;
+}
+
+.my-container {
+  transition: 0.4s;
+}
+
+.active-nav {
+  margin-left: 0;
+}
+
+/* for main section */
+.active-cont {
+  margin-left: 296px;
+}
+
+#menu-btn {
+  font-size: 22px;
+}
+
+.my-container input {
+  border-radius: 2rem;
+  padding: 2px 20px;
+}
+
+
+.top-navbar .nav li i{
+ font-size: 22px;
+}
+.side-navbar .nav .nav-link{
+  color: #243340;
+  font-size: 18px;
+}
+.side-navbar .nav .nav-item .nav-link::before{
+  content:"\ea17";
+  float: right;
+  font-family: 'boxicons'!important;
+  font-size: 34px;
+  line-height: 26px;
+  transition:transform .35s ease;
+}
+.side-navbar .nav .nav-item .btn-toggle-nav li a{
+  text-decoration: none;
+  display: block;
+}
+.side-navbar .nav .nav-item .nav-link[aria-expanded="true"]::before {
+  transform: rotate(180deg);
+}
+.side-navbar .nav .nav-link.active{
+  background-color: #E3E5E5;
+}
+.top-navbar .dropdown-menu.show{
+  left: -108px;
+}
+.top-navbar .nav .nav-link{
+  color: #41A0F2;
+}
+
+
+.filter-buttons {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.list-view-button,
+.grid-view-button {  
+  border: 1px solid olive;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.list-view-button:hover,
+.grid-view-button:hover {
+  background: white;
+  color: #0e2439;
 }
