@@ -1,10 +1,10 @@
 
 import './App.css';
-import DevicePage from './Pages/DevicePage';
+import ComingSoon from './Pages/ComingSoon';
 function App() {
   return (
    <>
-   <DevicePage/>
+   
    </>
   );
 }
